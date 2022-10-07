@@ -1,0 +1,12 @@
+h1{
+    color:black;
+    background-color:antiquewhite;
+}
+button{
+    color:azure;
+    background-color:slateblue;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color:blue;
+    border-style:dotted;
+}
