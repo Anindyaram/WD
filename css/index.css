@@ -1,16 +1,18 @@
 html{
-    background-color:rgb(158, 233, 235);
+    background-color:rgb(209, 246, 253);
 }
 br{
     display: block;
     margin:0%;
+    padding: 0px;
+    border:0px;
 }
 h1{
     margin: 0px;
 }
 .name{
     text-align: center;
-    color:rgb(255, 52, 52);
+    color:burlywood;
     transition: 1.4s;
 }
 .name:hover {
