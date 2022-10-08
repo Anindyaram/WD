@@ -33,4 +33,14 @@ button{
 }
 .button:hover {
     background-color: azure;
+    border-style:ridge;
+}
+
+.paragraph{
+    color:brown;
+    transition: 0.9s;
+}
+.paragraph:hover {
+    transform:rotateY(180deg);
+    color:black;
 }
