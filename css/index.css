@@ -5,18 +5,30 @@ br{
     display: block;
     margin:0%;
 }
+h1{
+    margin: 0px;
+}
 .name{
-    margin:0px;
     text-align: center;
     color:rgb(255, 52, 52);
-    transition: 1000ms;
+    transition: 1.4s;
+}
+.name:hover {
+    transform: rotateY(180deg);
 }
 
 button{
-    color:azure;
-    background-color:slateblue;
-    border-radius: 10px;
+    color:burlywood;
+    font-size: medium;
+    background-color:antiquewhite;
+    border-radius: 30px;
     border-width: 3px;
-    border-color:blue;
+    border-color:burlywood;
     border-style:dotted;
+    padding: 15px 25px;
+    cursor:pointer;
+    transition-duration: 0.4ss;
+}
+.button:hover {
+    background-color: azure;
 }
