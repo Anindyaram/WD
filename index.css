@@ -37,22 +37,16 @@ button{
     border-style:ridge;
 }
 
-.paragraph{
+p{
     color:brown;
-    transition: 0.9s;
+    text-align: center;
 }
-.paragraph:hover {
-    transform:rotateY(360deg);
-    color:black;
-}
-
 .cret{
     text-decoration: none;
-    color:rgb(253, 107, 97);
+    color:yellowgreen;
     /* line-height */
     /* letter-spacing: normal; */
 }
-
-/* .deco{
-    text-decoration: underline rgb(9, 113, 187);
-} */
+.cret:hover{
+    color:black;
+}
