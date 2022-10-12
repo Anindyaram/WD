@@ -1,0 +1,17 @@
+html{
+    background-color: rgb(235,229,215);
+}
+.myName{
+    text-align: center;
+    font-family:cursive;
+    color:rgb(200, 113, 0);
+}
+
+.mySelf{
+    text-align: center;
+    color:rgb(200, 113, 0);
+}
+
+img{
+    margin:0px;
+}
