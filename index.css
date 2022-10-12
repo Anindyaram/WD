@@ -8,7 +8,12 @@ br{
     border:0px;
 }
 h1{
+    letter-spacing: 10px;
+    font-size: 80px;
     margin: 0px;
+    /* font-weight: 400; */
+    /* width: 50%; */
+    /* font-family:fantasy; */
 }
 .name{
     text-align: center;

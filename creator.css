@@ -12,6 +12,6 @@ html{
     color:rgb(200, 113, 0);
 }
 
-img{
-    margin:0px;
+.image{
+    text-align: center;
 }
