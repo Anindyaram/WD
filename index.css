@@ -1,6 +1,11 @@
 html{
     background-color:rgb(209, 246, 253);
+    /* transition: background 5s linear; */
 }
+/* .recolor{
+    background: rgb(101, 101, 241);
+} */
+
 br{
     display: block;
     margin:0%;
