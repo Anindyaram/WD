@@ -1,0 +1,52 @@
+/* 
+universal selector =>
+    *{
+        color:black;
+    } 
+Element selector=>
+    img{
+        color:blue;
+    }
+ID Selector=>
+    #ID_name{
+        color:Red;
+    }
+Class Selector=>
+    .class_Name{
+        color:red;
+    }
+*/
+
+/*
+Descendent selector=>
+    (a inside of li here space( ) represent descendent)
+    li a
+    {
+        color:teal;
+    }
+    .class a{}
+    #id a{}
+    section li a{}
+
+    li,a(li and a){
+        color:teal;
+    }
+Adjacent Selector=>
+(+) selects p just after h1
+    h1+p{
+        color:red;
+    }
+Direct Decendent =>
+li that are direct child of div
+    div > li{
+        color:red;
+    }
+
+Attribute Selector=>
+input[type="text"]{
+    width: 300px;    
+}
+section[class="post"]{
+    color:red;
+}
+*/
