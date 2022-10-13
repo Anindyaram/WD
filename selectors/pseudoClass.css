@@ -1,0 +1,27 @@
+/*
+:hover
+
+.post a:hover{
+    color:blue;
+}
+
+a:link //unvisited links
+
+a:visited //visited links
+
+a:active  //Active links
+
+:checked
+selects every radio that is checked
+input[type="radio"]:checked
+
+:nth-of-type
+selecting every third element in class post
+.post:nth-of-type(3n){ 
+    backgorund-color:red;
+}
+
+
+and many more search if needed
+
+*/

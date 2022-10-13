@@ -41,6 +41,9 @@ button{
     background-color: azure;
     border-style:ridge;
 }
+.button:active{
+    background-color:aqua
+}
 
 p{
     color:brown;
