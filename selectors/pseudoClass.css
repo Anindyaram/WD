@@ -21,7 +21,14 @@ selecting every third element in class post
     backgorund-color:red;
 }
 
-
+li::first-letter{
+    font-size: 30px;
+}
+::selection{
+    background-color: rgb(107, 209, 246);
+}
+::after{}
+::before{}
 and many more search if needed
 
 */

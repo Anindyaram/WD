@@ -63,3 +63,14 @@ p{
 .cret:hover{
     color:black;
 }
+
+.list{
+    display: inline-block;
+}
+/*pseudo class*/
+li::first-letter{
+    font-size: 30px;
+}
+::selection{
+    background-color: rgb(107, 209, 246);
+}
