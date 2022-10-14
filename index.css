@@ -45,6 +45,8 @@ button{
 .button:hover {
     background-color: azure;
     border-style:ridge;
+    font-size: 10px;
+    margin-bottom: 7px;
 }
 .button:active{
     background-color:aqua
@@ -74,3 +76,6 @@ li::first-letter{
 ::selection{
     background-color: rgb(107, 209, 246);
 }
+
+/* !important
+and inline style ignore specificity */
