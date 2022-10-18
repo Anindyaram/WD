@@ -1,5 +1,5 @@
 div{
-    /* display: inline-block; */
+    display: inline-block;
     width:200px;
     height:200px;
     background-color: red;
@@ -8,4 +8,39 @@ div{
 h1{
     background-color: grey;
     width:121px;
+}
+
+#one{
+    background-color: bisque;
+    border-width: 10px;
+    border-color:black;
+    border-style:double;
+    /* box-sizing:border-box; */
+    /* padding: 2px; */
+}
+#two{
+    background-color: aquamarine;
+    border-color: blue;
+    border-width: 10px;
+    border-style:groove;
+
+}
+#three{
+    background-color: aqua;
+    border-color: yellow;
+    border-width:10px;
+    border-style:ridge;
+}
+#four{
+    /* background-color: yellow; */
+     /* border-width:10px;
+    border-style:dashed;
+    border-color:yellow;  */
+            /* or   */
+        /* style  color  width */
+    border:dashed yellow 10px ;
+    /* border-radius: 30px; */
+    /* border-start-end-radius: 30px; */
+    border-radius: 10% / 50%;
+
 }
