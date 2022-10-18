@@ -1,0 +1,32 @@
+section{
+    background-color: grey;
+    width:500px;
+    height: 500px;
+}
+
+div{
+    background-color: rgb(255, 124, 124);
+    width: 50%;
+    height:50%;
+}
+
+h1{
+    border:solid black 2px;
+    font-size: 40px;
+    line-height: 200px;
+}
+
+h2{
+    font-size: 2em;
+}
+
+h3{
+    font-size: 1.5em;
+}
+p{
+    font-size: 0.8em;
+}
+
+article{
+    font-size: 30px;
+}
