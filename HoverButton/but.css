@@ -18,7 +18,7 @@ button{
 
 button:hover{
     border-color: #f1ff5c;
-    /* color:white; */
+    color:#f1ff5c;
     box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
     transform: translateY(-0.2em);
     cursor: pointer;
