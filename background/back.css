@@ -1,0 +1,32 @@
+section {
+    width: 80%;
+    height: 800px;
+    /* background-color: aqua; */
+    /* background-image: url("https://images.unsplash.com/photo-1666161922647-ad32c06f910b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80");
+    background-size:cover; */
+    /* background-position:top; */
+    /* background:center/40% no-repeat blanchedalmond url("https://images.unsplash.com/photo-1666059368813-3b84b929e28d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"); */
+    background:center/cover no-repeat url("https://images.unsplash.com/photo-1666161922647-ad32c06f910b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80");
+    margin:0 auto;
+}
+
+h1 {
+    font-size:100px;
+    color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
