@@ -1,0 +1,43 @@
+div{
+    width:100px;
+    height:100px;
+    background-color: #3d405b;
+    margin:10px;
+    border:solid black 2px;
+    display:inline-block;
+}
+
+#second{
+    background-color: #81b29a;
+    /* position: static; */
+}
+
+#static #second{
+    position:static;
+    top:100px;
+}
+
+#relative #second{
+    position: relative;
+    top:50px;
+    left: 50px;
+}
+/* #absolute{
+    position:absolute;
+}
+
+#absolute #second{
+    position: absolute;
+    top:1px;
+    left:1px;
+} */
+
+#fixed #second{
+    position: fixed;
+    top:0px;
+    left:0px;
+}
+
+
+
+
