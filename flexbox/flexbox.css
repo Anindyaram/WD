@@ -8,18 +8,18 @@ h1{
 #container{
     background-color: #003049;
     width: 90%;
-    height: 500px;
+    /* height: 500px; */
     margin: 0 auto;
     border: 5px solid #003049;
     display: flex;
     /* felxbox contain two axis Main Axis<-----> and Cross Axix (|) */
-    flex-direction:column;
+    flex-direction:row;
     justify-content:center;/*Main axis*/
     /* flex-wrap:nowrap; */
     /* align-items:baseline;    Cross Axis */
     /* flex-wrap: wrap-reverse; */
-    align-items: flex-end;
-    flex-wrap: wrap;
+    /* align-items: center; */
+    /* flex-wrap: wrap; */
     /* if flex wrap is not used then align-content will do nothing*/
     /* align-content:center;  */
 }
@@ -27,15 +27,49 @@ h1{
 #container div{
     width: 200px;
     height: 200px;
+    /* max-width: 300px; */
     text-align: center;
+    flex-basis: 600px;
+    flex-grow: 1;
     /* font-size: 4em; */
 }
 
-/* div:nth-of-type(3){
-    align-self:flex-start;
-} */
+div:nth-of-type(1){
+    flex-grow: 1;
+    flex-shrink: 2;
+}
+div:nth-of-type(5){
+    flex-grow: 2;
+    flex-shrink: 2;
+}
 
-/* div:nth-of-type(3){
+main{
+    width: 80%;
+    margin: 0 auto;
+    border:5px solid black;
+    height: 500px;
+    display: flex;
+}
+
+main .sidebar {
+    background-color: #6930c3;
+    border: 2px solid white;
+    /*flex:flex-grow flex-shrink flex-basis */
+    flex: 1 2 300px;
+}
+
+main .maincontent {
+    background-color: #80ffdb;
+    flex: 2 800px;
+}
+
+/* 
+
+ div:nth-of-type(3){
+    align-self:flex-start;
+} 
+
+ div:nth-of-type(3){
     align-self:flex-end;
 }
 div:nth-of-type(2){
@@ -43,5 +77,6 @@ div:nth-of-type(2){
 }
 div:nth-of-type(4){
     align-self:center;
-} */
+} 
+*/
 
