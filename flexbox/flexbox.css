@@ -1,5 +1,5 @@
 body{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Shalimar', cursive;    
 }
 h1{
     text-align: center;
@@ -14,10 +14,14 @@ h1{
     display: flex;
     /* felxbox contain two axis Main Axis<-----> and Cross Axix (|) */
     flex-direction:column;
+    justify-content:flex-start;
+    flex-wrap:wrap;
+    
 }
 
 #container div{
     width: 200px;
     height: 200px;
+    text-align: center;
 }
 
