@@ -1,4 +1,4 @@
-function getThrice(func){
+/*function getThrice(func){
     func();
     func();
     func();
@@ -16,6 +16,34 @@ function rolldice(){
 }
 Ntime(rolldice,20);
 
+*/
+
+//Returning a function 
+
+// function compare(){
+//     const rand = Math.random();
+//     if(rand>0.5){
+//         return function(){
+//             console.log('greater then 0.5!,You are lucky');
+//         }
+//     }else{
+//         return function(){
+//             console.log('Not Greater then 0.5')
+//             console.log('Try next time!');
+//         }
+//     }
+// }
+// let result = compare();
+// result();
+
+function camparison(min,max){
+    return function(num){
+        return num>=min && num<=max;
+    }
+}
+
+const age = camparison(0,18);
+age(18);
 
 
 
