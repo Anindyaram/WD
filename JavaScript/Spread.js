@@ -23,7 +23,10 @@ console.log(ticToc)
 
 console.log({...[2,1,4,5,3]})//indices are taken as key
 
+const tictc = {...toc,...tc,g:111}
+console.log(tictc)
 
+console.log({...['asd','sad','dasdsa','fdfv','vfdb']})//indices are taken as key
 
 
 
