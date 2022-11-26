@@ -18,6 +18,9 @@ h1 {
 #banner {
     width: 100%;
 }
+#try{
+    width:50%;
+}
 img.square {
     width: 400px;
     object-fit: cover;
