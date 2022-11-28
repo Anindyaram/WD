@@ -3,7 +3,8 @@ const container = document.querySelector('#container');
 
 button.addEventListener('click', function (e) {
     container.style.backgroundColor = makeRandColor();
-    e.stopPropagation();
+    e.stopPropagation(); //USe to stoping bubbling in javascript 
+    //Bubbling is when event goes to its parentTag and runs again 
 })
 container.addEventListener('click', function () {
     container.classList.toggle('hide');

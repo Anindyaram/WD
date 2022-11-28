@@ -21,5 +21,6 @@ const addTweet = (username, tweet) => {
 
 tweetsContainer.addEventListener('click', function (e) {
     e.target.nodeName === 'LI' && e.target.remove();
+    //target is the key property in removing newly added li 
 })
 
