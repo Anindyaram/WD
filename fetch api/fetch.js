@@ -47,7 +47,7 @@
 //         console.log("error" ,e);   
 //     })
 
-/******************************OR**************************/
+/******************************OR*************************/
 //using async function to make the code cleaner
 
 const loadStarWarCharacter = async ()=>{
