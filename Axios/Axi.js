@@ -23,9 +23,9 @@ const button = document.querySelector('button');
 const addNewJoke = async () => {
     const jokeText = await getDadJoke();
     console.log(jokeText)
-    //     const newLi = document.createElement('li');
-    //     newLi.append(res.data.joke);
-    //     jokes.append(newLi);
+        const newLi = document.createElement('li');
+        newLi.append(jokeText);
+        jokes.append(newLi);
     }
 
     const getDadJoke = async () => {
@@ -34,7 +34,7 @@ const addNewJoke = async () => {
             const res = await axios.get("https://icanhazdadjoke.com/", config)
             return res.data.joke;
         } catch (e) {
-            console.log("ERROR!!", e)
+            console.log("No jokes Available Sorry!!!", e)
         }
     }
 
