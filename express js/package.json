@@ -4,19 +4,19 @@
   "description": "Web Development practice programs.\r by Colt Steele",
   "main": "index.js",
   "dependencies": {
+    "asynckit": "^0.4.0",
+    "axios": "^1.2.1",
     "combined-stream": "^1.0.8",
     "delayed-stream": "^1.0.0",
-    "asynckit": "^0.4.0",
     "follow-redirects": "^1.15.2",
     "form-data": "^4.0.0",
-    "axios": "^1.2.1",
-    "proxy-from-env": "^1.1.0",
+    "mime-db": "^1.52.0",
     "mime-types": "^2.1.35",
-    "mime-db": "^1.52.0"
+    "nodemon": "^2.0.20",
+    "proxy-from-env": "^1.1.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "devStart":"nodemon express.js"
+    "devStart": "nodemon express.js"
   },
   "repository": {
     "type": "git",
