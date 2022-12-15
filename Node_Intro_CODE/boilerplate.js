@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require('fs');   //import a built-in module with the help of require in the code
 const folderName = process.argv[2] || 'Project'
 
 // fs.mkdir('Dogs', { recursive: true }, (err) => {
