@@ -1,7 +1,9 @@
-const joke =require('give-me-a-joke')
+// const joke =require('give-me-a-joke')
 const oneLinerJoke = require('one-liner-joke')
 const color = require('colors')
-// console.dir(joke);
+// const cowsay = require('cowsay') //on CLI run "npm link cowsay" to use  
+// console.dir(oneLinerJoke);
+
 // joke.getRandomDadJoke (function(joke) {
 //      console.log(joke);
 // });
@@ -13,4 +15,4 @@ const color = require('colors')
 // });
 
 var getRandomJoke = oneLinerJoke.getRandomJoke();
-console.log(getRandomJoke.body.rainbow)
+console.log(getRandomJoke.body.rainbow);
