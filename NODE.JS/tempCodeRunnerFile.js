@@ -1,7 +1,3 @@
-server.listen(port,(e)=>{
-//     if(e){
-//         console.log('Error!!');
-//     }else{
-//         console.log('Server is listening at port ',port)
-//     }
-// })
+// for (let i = 0; i < 10; i++) {
+//     console.log("HELLO FROM FIRST SCRIPT!!")
+// }
