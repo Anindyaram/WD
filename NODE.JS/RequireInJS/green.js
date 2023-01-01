@@ -1,4 +1,4 @@
 module.exports = {
-    name:'green',
+    name:'Tree',
     color:'green'
 }
