@@ -1,4 +1,5 @@
 var figlet = require('figlet');
+const colors = require('colors');
 
 figlet('Anindya Ram Tripathi!', function(err, data) {
     if (err) {
@@ -6,5 +7,5 @@ figlet('Anindya Ram Tripathi!', function(err, data) {
         console.dir(err);
         return;
     }
-    console.log(data)
+    console.log(data.rainbow)
 });
