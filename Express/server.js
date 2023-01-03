@@ -10,7 +10,9 @@ app.get("/",(req,res)=>{
 
 app.use('/index',rout)
 
-app.listen(3000)
+app.listen(1000,()=>{
+    console.log("Listening on port 3000")
+})
 
 
 
