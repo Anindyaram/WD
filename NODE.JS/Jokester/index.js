@@ -15,4 +15,4 @@ const color = require('colors')
 // });
 
 var getRandomJoke = oneLinerJoke.getRandomJoke();
-console.log(getRandomJoke.body.rainbow);
+console.log(getRandomJoke.body.blue);

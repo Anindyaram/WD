@@ -7,5 +7,5 @@ figlet('Anindya Ram Tripathi!', function(err, data) {
         console.dir(err);
         return;
     }
-    console.log(data.rainbow)
+    console.log(data.bgMagenta)
 });
