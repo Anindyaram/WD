@@ -1,3 +1,4 @@
+const { query } = require("express");
 const express = require("express")
 const app = express();
 // console.dir(app)
@@ -21,6 +22,17 @@ app.get('/r/:subreddit',(req,res)=>{
     // console.log(req.params);
     // res.send('<h1>This is a subreddit</h1>');
 })
+
+//query string in request object
+app.get('/search' ,(req,res)=>{
+    console.log(req.query);
+    const { q } = req.query;
+    res.send(`<h1>Search result for: ${q}</h1>`);
+    // console.log(req.query);
+    // res.send('Query String !');
+})
+// http://localhost:3000/search?q=dog === { q: 'dog' }
+// http://localhost:3000/search?q=dog&color=red === { q: 'dog', color: 'red' }
 
 app.post('/about' , (req ,res)=>{
     console.log('we got a post request!!');
