@@ -25,8 +25,11 @@ app.get('/r/:subreddit',(req,res)=>{
 
 //query string in request object
 app.get('/search' ,(req,res)=>{
-    console.log(req.query);
     const { q } = req.query;
+    // console.log(req.query);
+    if(!q){
+        res.send('Nothing searched!!')
+    }
     res.send(`<h1>Search result for: ${q}</h1>`);
     // console.log(req.query);
     // res.send('Query String !');
