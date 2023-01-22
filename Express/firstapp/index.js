@@ -13,6 +13,15 @@ app.get('/', (req,res)=>{
     res.send({name:'Prince'});
 })
 
+//Making pattern for sub paths like subreddit
+app.get('/r/:subreddit',(req,res)=>{
+    const {subreddit} = req.params; //extracting parameters
+    console.log(req.params);
+    res.send(`This is ${subreddit} subreddit 😁`);
+    // console.log(req.params);
+    // res.send('<h1>This is a subreddit</h1>');
+})
+
 app.post('/about' , (req ,res)=>{
     console.log('we got a post request!!');
     res.send('POST request from /home ')
@@ -22,6 +31,10 @@ app.get('/about',(req,res)=>{
     console.log("its about section😲");
 
     res.send("<h1>Anindya Ram Tripathi</h1>");
+})
+
+app.get('*' , (req ,res)=>{
+    res.send(`I don't know this path`)
 })
 
 //connects to the localhost:3000
