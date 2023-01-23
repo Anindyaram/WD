@@ -1,7 +1,7 @@
-# /node_modules/
+/node_modules/
 # /Express/package.json
 # /Express/package-lock.json
-# **/node_modules
+**/node_modules
 # /NODE.JS/Artster/package-lock.json
 # /NODE.JS/Artster/package.json
 
