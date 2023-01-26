@@ -11,12 +11,22 @@ app.get('/',(req ,res)=>{
     console.log("Sends the webpage to localhost:3000")
     res.render('home.ejs');
 })
-//Sending data by templating https://localhost:3000/rand
+//Sending data by templating https://localhost:3000/rand 
 app.get('/rand' , (req , res)=>{
     console.log('Random page accessed!');
     const num = Math.floor(Math.random()*10)+1; // Data that we are going to send from route to Embedded JavaScript
     res.render('rand.ejs' /*File that we have to access*/ , {num : num}/*Object:key value pair as 2nd argument*/);
 })
+
+app.get('/cats' , (req,res)=>{
+    console.log("Cats Page");
+    const cats = [
+        'Claw' , 'Crack' , 'Martha' , 'stiky' , 'pinky' 
+    ]
+    res.render('cats.ejs' , { cats });
+})
+
+
 //created a sub page by using a pattern for pages like https://localhost:3000/subpage
 app.get('/r/:subpage' , (req ,res)=>{
     console.log('Entered sub page!');
