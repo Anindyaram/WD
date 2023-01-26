@@ -1,6 +1,8 @@
 const express = require('express')
 const path = require('path'); 
 const app = express();
+const redditData = require('./data.json')
+
 
 app.set('view engine' , 'ejs'); //setting ejs 
 
@@ -18,6 +20,7 @@ app.get('/rand' , (req , res)=>{
     res.render('rand.ejs' /*File that we have to access*/ , {num : num}/*Object:key value pair as 2nd argument*/);
 })
 
+//Getting Data from an array and rendering it
 app.get('/cats' , (req,res)=>{
     console.log("Cats Page");
     const cats = [
@@ -31,7 +34,13 @@ app.get('/cats' , (req,res)=>{
 app.get('/r/:subpage' , (req ,res)=>{
     console.log('Entered sub page!');
     const {subpage} = req.params;
-    res.render('subpage.ejs' , {subpage});
+    const data = redditData[subpage];
+    if(data){
+        res.render('subpage.ejs',{ ...data });
+    }else{
+        res.render('notFound' , {subpage} );
+    }
+    // res.render('subpage.ejs' , { ...data });
 })
 
 //Connecting to https://localhost:3000/
