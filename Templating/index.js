@@ -3,6 +3,9 @@ const path = require('path');
 const app = express();
 const redditData = require('./data.json')
 
+//Use to join the paths. So that index.js can access views file even when it is called from outside the current directory 
+//Used to connect css file 
+app.use(express.static(path.join(__dirname , 'public')));
 
 app.set('view engine' , 'ejs'); //setting ejs 
 
