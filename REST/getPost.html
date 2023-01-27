@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get And Post</title>
 </head>
-<body>
+<body> 
     <h1>Using Post to send data:</h1>
-    <form action="/tacos" method="post">
+    <form action="http://localhost:8080/tacos" method="post">
         <input type="text" name="Rice" id="#rice">
         <input type="number" name="qty" id="#qty">
         <button>Submit</button>
     </form>
     <h1>Using get to send data:</h1>
-    <form action="/tacos" method="get">
+    <form action="http://localhost:8080/tacos" method="get">
         <input type="text" name="Rice" id="#rice">
         <input type="number" name="qty" id="#qty">
         <button>Submit</button>
