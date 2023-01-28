@@ -98,6 +98,8 @@ app.delete('/comments/:id', (req, res) => {
     res.redirect('/comments');
 })
 
+
+//This is how we will process data 
 app.get('/tacos', (req, res) => {
     res.send("GET /tacos response")
 })
