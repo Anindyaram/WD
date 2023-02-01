@@ -11,6 +11,11 @@
     <h2> <%= comment.username %>:  </h2>
     <p><%= comment.comment %> </p>
 
-    <a href="/comments">Click to go to index</a>
+    <a href="/comments">Click to go to index</a><br>
+    <a href="/comments/<%= comment.id %>/edit">Click to Edit</a>
+
+    <form method="post" action="/comments/<%= comment.id %>?_method=DELETE">
+        <button>DELETE</button>
+    </form>
 </body>
 </html>

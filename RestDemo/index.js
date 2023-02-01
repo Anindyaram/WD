@@ -1,11 +1,13 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const methodOverride = require('method-override');
 const { v4 : uuidv4 } = require('uuid');
 uuidv4();
 
 app.use(express.urlencoded({extended:true}))
 app.use(express.json());
+app.use(methodOverride('_method'));
 app.set('views',path.join(__dirname , 'views'));
 app.set('view engine','ejs');
 
@@ -61,6 +63,30 @@ app.get('/comments/:id' , (req ,res)=>{
     const comment = comments.find(c => c.id === id);
     res.render('comments/show', {comment});
 })
+
+//We are going to edit the comment by using get request as our browser only send get and post request for forms
+app.get('/comments/:id/edit' , (req , res)=>{
+    const { id } = req.params;
+    const comment = comments.find(c => c.id === id);
+    res.render('comments/edit',{ comment });
+})
+
+//This is going to update the comment we can use put or patch it's completely my choice
+app.patch('/comments/:id' , (req , res)=>{
+    const { id } = req.params;
+    const newCommentText = req.body.comment;
+    const foundComment = comments.find(c => c.id === id);
+    foundComment.comment = newCommentText;
+    res.redirect('/comments')
+})
+
+//This is going to delete a comment 
+app.delete('/comments/:id' , (req ,res)=>{
+    const {id} = req.params;
+    comments = comments.filter(c => c.id !== id);
+    res.redirect('/comments') 
+})
+
 
 //This is how we will process data 
 app.get('/tacos', (req, res) => {
