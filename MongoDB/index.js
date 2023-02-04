@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', false);
+//connecting to the database running in the background
 mongoose.connect('mongodb://127.0.0.1:27017/movieApp',)
     .then(()=>{
         console.log("Connection!")
@@ -9,6 +10,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/movieApp',)
         console.log(err)
     })
 
+//Created an instance of schema design
 const movieSchema = new mongoose.Schema({
     title: String,
     year: Number,
@@ -16,8 +18,17 @@ const movieSchema = new mongoose.Schema({
     rating:String
 });
 
+//Created a model of the above instance
 const Movie = mongoose.model('Movie' ,movieSchema);
-const amadeus = new Movie({title:'Amadeus',year:1988 ,score:9.2 ,rating:'R'});
+//Entered data into the above model
+// const amadeus = new Movie({title:'Amadeus',year:1988 ,score:9.2 ,rating:'R'});
+
+Movie.insertMany([
+    {title:'Amadeus',year:1980 ,score:9.2 ,rating:'R'},
+    {title:'Amade',year:1989 ,score:8.2 ,rating:'R'},
+    {title:'madeu',year:1990 ,score:8.6 ,rating:'R'},
+    {title:'adeu',year:1999 ,score:8.4 ,rating:'R'}
+])
 
 
 //run mongod in background 
