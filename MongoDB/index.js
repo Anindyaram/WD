@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', false);
+mongoose.set('useFindAndModify',false);
 //connecting to the database running in the background
 mongoose.connect('mongodb://127.0.0.1:27017/movieApp',)
     .then(()=>{
@@ -20,15 +21,18 @@ const movieSchema = new mongoose.Schema({
 
 //Created a model of the above instance
 const Movie = mongoose.model('Movie' ,movieSchema);
-//Entered data into the above model
-// const amadeus = new Movie({title:'Amadeus',year:1988 ,score:9.2 ,rating:'R'});
 
+//Entered data into the above model but we have to run amadeus.save() to send in mongo
+// const amadeus = new Movie({title:'Amadeus',year:1988 ,score:9.2 ,rating:'R'});
+/*
+//Entered the multiple data in mongo and it is saved automatically
 Movie.insertMany([
     {title:'Amadeus',year:1980 ,score:9.2 ,rating:'R'},
     {title:'Amade',year:1989 ,score:8.2 ,rating:'R'},
     {title:'madeu',year:1990 ,score:8.6 ,rating:'R'},
     {title:'adeu',year:1999 ,score:8.4 ,rating:'R'}
 ])
+*/
 
 
 //run mongod in background 
