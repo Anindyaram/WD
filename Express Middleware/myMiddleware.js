@@ -31,7 +31,9 @@ const verifyPassword = (req,res,next)=>{
     if(password === 'enticing'){
         next();
     }
-    res.send('Enter Correct password')
+    // res.send('Enter Correct password')
+    // error handeling
+    throw new Error('Password Required')
 }
 
 app.get('/',(req,res)=>{
@@ -46,12 +48,27 @@ app.get('/dogs',(req,res)=>{
 //Using middleware as callback function in the route to verify the query string 
 app.get('/secret',verifyPassword,(req,res)=>{
     res.send('SEcret Revealed!!');
+
+})
+
+app.get('/error',(req,res)=>{
+    error.fly();
 })
 
 //If none of the routes are matching then this will run
 app.use((req,res)=>{
     res.status(404).send('NOT FOUND!');
 })
+
+//Error handeler made by me
+app.use((err ,req ,res ,next )=>{
+    console.log("**********************************************")
+    console.log("********************Error*********************")
+    console.log("**********************************************")
+    res.send('Theirs an error please try again')
+})
+
+
 app.listen(3000,()=>{
     console.log('Listening at port 3000');
 })
