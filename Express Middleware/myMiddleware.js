@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
+const AppError = require('./AppError')
 const app = express();
 
 app.use(morgan('tiny'));
@@ -33,7 +34,9 @@ const verifyPassword = (req,res,next)=>{
     }
     // res.send('Enter Correct password')
     // error handeling
-    throw new Error('Password Required')
+    // res.status(401);
+    // throw new Error('Password Required')
+    throw new AppError('Password Required' , 401);
 }
 
 app.get('/',(req,res)=>{
@@ -65,10 +68,10 @@ app.use((err ,req ,res ,next )=>{
     console.log("**********************************************")
     console.log("********************Error*********************")
     console.log("**********************************************")
-    res.status(500).send('Theirs an error please try again')
+    // res.status(500).send('Theirs an error please try again')
     //if we want other error handeler then we pass err in next();
-    // console.log(err)
-    // next()
+    console.log(err)
+    next(err);
 })
 
 
