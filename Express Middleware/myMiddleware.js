@@ -65,7 +65,10 @@ app.use((err ,req ,res ,next )=>{
     console.log("**********************************************")
     console.log("********************Error*********************")
     console.log("**********************************************")
-    res.send('Theirs an error please try again')
+    res.status(500).send('Theirs an error please try again')
+    //if we want other error handeler then we pass err in next();
+    // console.log(err)
+    // next()
 })
 
 
