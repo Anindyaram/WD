@@ -58,11 +58,15 @@ app.get('/error',(req,res)=>{
     error.fly();
 })
 
+app.get('/admin',(req,res)=>{
+    throw new AppError('You are not Admin',403);
+})
+
 //If none of the routes are matching then this will run
 app.use((req,res)=>{
     res.status(404).send('NOT FOUND!');
 })
-
+/*
 //Error handeler made by me
 app.use((err ,req ,res ,next )=>{
     console.log("**********************************************")
@@ -73,7 +77,14 @@ app.use((err ,req ,res ,next )=>{
     console.log(err)
     next(err);
 })
+*/
 
+//Error Handeler the topic is heavy but we can grasp it
+app.use((err, req ,res ,next)=>{
+    // const { status } = err; //Created a error with only status code
+    const { status = 500 ,message = "Something went wrong" } = err; //Making this one default if their is no status code in error
+    res.status(status).send(message)
+})
 
 app.listen(3000,()=>{
     console.log('Listening at port 3000');
