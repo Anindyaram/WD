@@ -9,7 +9,7 @@ const Farm = require('./models/farm')
 const categories = ['fruit', 'vegetable', 'dairy'];
 
 
-mongoose.connect('mongodb://localhost:27017/farmStandTake2', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://127.0.0.1:27017/farmStandTake2', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("MONGO CONNECTION OPEN!!!")
     })
